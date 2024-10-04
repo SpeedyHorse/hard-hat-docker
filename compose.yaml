@@ -1,0 +1,11 @@
+services:
+  hardhat:
+    container_name: block_chain
+    build: ./docker/
+    ports:
+      - 8545:8545
+    volumes:
+      - ./src:/chain
+    tty: true
+    environment:
+      - TZ=Asia/Tokyo
